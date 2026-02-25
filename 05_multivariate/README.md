@@ -12,11 +12,14 @@ All notebooks use built-in or simulated datasets — no downloads required.
 
 | Notebook | Description |
 |---|---|
+| `multivariate_assumptions.ipynb` | Dispersion homogeneity (betadisper), checking multivariate normality; these are the assumption checks that belong before PERMANOVA and dbRDA |
 | `pca.ipynb` | Principal components analysis: ordination, biplots, variance explained, and interpretation |
 | `nmds.ipynb` | Non-metric multidimensional scaling: stress, ordination plots, and species vectors |
 | `permanova.ipynb` | PERMANOVA and pairwise PERMANOVA for testing multivariate group differences |
 | `anosim_mantel.ipynb` | ANOSIM for group separation; Mantel test for matrix correlation |
 | `dbrda.ipynb` | Distance-based redundancy analysis: constrained ordination with environmental predictors |
+| `beta_diversity.ipynb` | Decomposing beta diversity into nestedness vs. turnover components (betapart); important for interpreting PERMANOVA results |
+| `indicator_species.ipynb` | IndVal and multipatt for identifying which species characterize each group; pairs naturally with NMDS/PERMANOVA |
 | `clustering.ipynb` | Hierarchical clustering and k-means applied to community/compositional data |
 | `biplots_visualization.ipynb` | Publication-quality ordination plots with species/variable vectors using `ggplot2` |
 
