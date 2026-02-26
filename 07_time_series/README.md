@@ -10,7 +10,7 @@ All notebooks use built-in or simulated datasets — no downloads required.
 
 | Notebook | Description |
 |---|---|
-| `stationarity.ipynb | ADF/KPSS tests, unit roots, differencing to achieve stationarity |
+| `stationarity.ipynb` | ADF/KPSS tests, unit roots, differencing to achieve stationarity |
 | `decomposition.ipynb` | Trend, seasonality, and residual decomposition using classical and STL methods |
 | `acf_pacf.ipynb` | Autocorrelation and partial autocorrelation functions; identifying AR and MA structure |
 | `arima.ipynb` | ARIMA modeling: identification, fitting, diagnostics, and forecasting |
