@@ -16,6 +16,8 @@ All notebooks use built-in or simulated datasets — no downloads required.
 | `cox_proportional_hazards.ipynb` | Cox PH model: fitting, assumption checking (proportional hazards), and interpretation of hazard ratios |
 | `accelerated_failure_time.ipynb` | AFT models as a parametric alternative to Cox regression |
 | `survival_visualization.ipynb` | Publication-quality survival curves with confidence intervals using `survminer` |
+| `competing_risks.ipynb` | When subjects can fail from multiple causes (invertebrate lost to predation vs. desiccation; patient dies from cancer vs. cardiovascular disease); cumulative incidence functions and Fine-Gray subdistribution hazards. Frequently needed and frequently mishandled with standard KM |
+| `time_varying_covariates.ipynb` | covariates that change value during follow-up (treatment dose changes, habitat quality measured at multiple points); extends Cox and fixes a major assumption violation people routinely miss |
 
 ---
 
