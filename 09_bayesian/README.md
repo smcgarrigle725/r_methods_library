@@ -15,6 +15,8 @@ All notebooks use simulated datasets — no downloads required.
 | `hierarchical_models.ipynb` | Bayesian hierarchical (multilevel) models; partial pooling and shrinkage |
 | `mcmc_diagnostics.ipynb` | Trace plots, R-hat, effective sample size, and posterior predictive checks with `coda` |
 | `model_comparison_waic.ipynb` | Bayesian model comparison using WAIC and LOO-CV with the `loo` package |
+| `prior_sensitivity_R.ipynb` | Core demonstration fits the same model across four prior widths (tight/moderate/wide/vague) on both a large and small dataset simultaneously, then visualises the posterior densities overlaid |
+| `bayesian_workflow_R.ipynb` | Deliberately engineered to fail on the first model (Poisson) so the PPC failure is concrete and instructive rather than hypothetical. The variance/mean test statistic is the specific PPC that catches the overdispersion, which then motivates the switch to Negative Binomial. The notebook ends with a 10-point checklist formatted as an actual checklist that can live in the folder as a reference card. The workflow loops — that's the main point the pitfalls section reinforces |
 
 ---
 
