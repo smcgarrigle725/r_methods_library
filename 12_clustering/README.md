@@ -15,6 +15,8 @@ All notebooks use built-in or simulated datasets — no downloads required.
 | `dbscan.ipynb` | DBSCAN for density-based clustering; handling noise and irregular cluster shapes |
 | `gaussian_mixture_models.ipynb` | Gaussian mixture models with `mclust`; probabilistic cluster assignment |
 | `cluster_validation.ipynb` | Internal validation metrics: silhouette width, Calinski-Harabasz, Davies-Bouldin |
+| `dimensionality_reduction.ipynb` | PCA, UMAP, and t-SNE for visualising high-dimensional data before and after clustering; these are almost always used together with clustering in practice and the workflow of "reduce → cluster → visualise" deserves its own notebook. Distinct enough from the clustering methods themselves |
+| `cluster_profiling.ipynb` | Interpreting and describing clusters after assignment: heatmaps of feature means, statistical tests between clusters, naming/labelling strategies; the step most notebooks skip entirely but that determines whether clustering results are actually usable |
 
 ---
 
