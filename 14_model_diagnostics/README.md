@@ -17,6 +17,9 @@ All notebooks use built-in or simulated datasets — no downloads required.
 | `shap_values.ipynb` | SHAP values for global and local model interpretation with `shapviz` |
 | `partial_dependence.ipynb` | Partial dependence plots and individual conditional expectation (ICE) curves |
 | `permutation_importance.ipynb` | Permutation-based feature importance with `vip` |
+|'overdispersion.ipynb'|testing and correcting overdispersion in count models (Poisson vs. negative binomial, quasi-likelihood, zero-inflation tests); commonly mishandled and distinct from DHARMa which is broader|
+|'model_comparison.ipynb'|likelihood ratio tests, AIC comparison between nested models, Vuong test for non-nested models; the formal testing complement to the AIC selection notebook|
+|'accumulated_local_effects.ipynb'|ALE plots as a bias-corrected alternative to PDPs when predictors are correlated; PDPs give misleading results with correlated features, which is nearly always the case in ecological data; 'ALEPlot' or 'iml' package|
 
 ---
 
