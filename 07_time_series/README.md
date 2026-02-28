@@ -1,25 +1,21 @@
-# Time Series Analysis
+# 07 · Time Series
 
-Notebooks covering time series decomposition, modeling, and forecasting in R. Time series methods are applicable to ecological monitoring data, patient longitudinal records, financial price series, and insurance claims trends.
-
-All notebooks use built-in or simulated datasets — no downloads required.
-
----
-
-## Contents
+Analysis and forecasting of temporally ordered data. Covers classical decomposition through state-space models, with emphasis on ecological monitoring and environmental data applications.
 
 | Notebook | Description |
 |---|---|
-| `stationarity.ipynb` | ADF/KPSS tests, unit roots, differencing to achieve stationarity |
-| `decomposition.ipynb` | Trend, seasonality, and residual decomposition using classical and STL methods |
-| `acf_pacf.ipynb` | Autocorrelation and partial autocorrelation functions; identifying AR and MA structure |
-| `arima.ipynb` | ARIMA modeling: identification, fitting, diagnostics, and forecasting |
-| `sarima.ipynb` | Seasonal ARIMA for data with periodic patterns |
-| `exponential_smoothing.ipynb` | Exponential smoothing and Holt-Winters models |
-| `prophet_forecasting.ipynb` | Facebook Prophet for flexible trend and seasonality forecasting |
-| `intervention_analysis.ipynb` | Detecting and modelling structural breaks, step changes, and pulse events in time series; directly relevant to before/after ecological assessments, policy changes, treatment rollouts |
-| `ts_regression.ipynb` | Regression with autocorrelated errors (GLS/ARIMA errors); bridges time series and regression folders and covers a very common applied case |
-| `ts_cross_validation.ipynb` | Time-series-aware cross-validation to prevent data leakage |
+| `ts_basics_R.ipynb` | `ts` objects, plotting, ACF/PACF, stationarity, differencing |
+| `decomposition_R.ipynb` | STL, classical, and X11 decomposition; trend/seasonality separation |
+| `arima_R.ipynb` | ARIMA modelling; `auto.arima`; model identification and diagnostics |
+| `sarima_R.ipynb` | Seasonal ARIMA; handling periodic patterns in ecological time series |
+| `exponential_smoothing_R.ipynb` | ETS models; Holt-Winters; forecast::ets |
+| `prophet_R.ipynb` | Facebook Prophet for trend + seasonality + changepoints |
+| `intervention_analysis_R.ipynb` | Interrupted time series; detecting change after an event |
+| `multivariate_ts_R.ipynb` | VAR models; Granger causality; impulse response functions |
+| `ts_cross_validation_R.ipynb` | Time-series-aware CV; expanding and sliding window evaluation |
+| `garch_R.ipynb` | Volatility modelling; ARCH/GARCH for non-constant variance |
+
+**Key packages:** `forecast`, `tseries`, `prophet`, `vars`, `rugarch`
 
 ---
 
