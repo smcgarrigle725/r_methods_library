@@ -1,25 +1,28 @@
-# Model Diagnostics & Interpretation
+# 14 · Model Diagnostics and Interpretation
 
-Notebooks covering tools for evaluating whether a model is well-specified, checking that assumptions are met post-fitting, and interpreting what a model has learned. Good diagnostics are what separate a trustworthy analysis from one that merely produces output.
+Two complementary concerns in one folder: **diagnostics** (is the model valid?) and **interpretation** (what does the model say?). Diagnostics notebooks should be consulted before interpreting any model; interpretation notebooks are most useful after a well-specified model has passed diagnostics.
 
-All notebooks use built-in or simulated datasets — no downloads required.
-
----
-
-## Contents
+## Diagnostics
 
 | Notebook | Description |
 |---|---|
-| `residual_diagnostics.ipynb` | Residual plots, Q-Q plots, scale-location, and influential observations for linear models |
-| `dharma_diagnostics.ipynb` | Simulation-based residual diagnostics for GLMMs and other complex models using `DHARMa` |
-| `multicollinearity.ipynb` | Variance inflation factor (VIF), correlation matrices, and strategies for handling collinearity |
-| `influential_observations.ipynb` | Cook's distance, leverage, DFFITS, and handling outliers responsibly |
-| `shap_values.ipynb` | SHAP values for global and local model interpretation with `shapviz` |
-| `partial_dependence.ipynb` | Partial dependence plots and individual conditional expectation (ICE) curves |
-| `permutation_importance.ipynb` | Permutation-based feature importance with `vip` |
-|'overdispersion.ipynb'|testing and correcting overdispersion in count models (Poisson vs. negative binomial, quasi-likelihood, zero-inflation tests); commonly mishandled and distinct from DHARMa which is broader|
-|'model_comparison.ipynb'|likelihood ratio tests, AIC comparison between nested models, Vuong test for non-nested models; the formal testing complement to the AIC selection notebook|
-|'accumulated_local_effects.ipynb'|ALE plots as a bias-corrected alternative to PDPs when predictors are correlated; PDPs give misleading results with correlated features, which is nearly always the case in ecological data; 'ALEPlot' or 'iml' package|
+| `residual_diagnostics_R.ipynb` | The four standard plots; formal tests (Shapiro-Wilk, Breusch-Pagan, Durbin-Watson); robust SEs |
+| `dharma_diagnostics_R.ipynb` | Simulation-based residuals for GLMMs and any complex model; dispersion, zero-inflation, outlier tests |
+| `multicollinearity_R.ipynb` | VIF, condition number, correlation matrices; remedies including ridge regression and PCA regression |
+| `influential_observations_R.ipynb` | Cook's distance, leverage, DFFITS, DFBETAS; the decision framework for what to do with flagged points |
+| `overdispersion_R.ipynb` | Detecting overdispersion in count and binary models; quasi-Poisson, negative binomial, zero-inflated models |
+| `model_comparison_R.ipynb` | LRT for nested models; AIC/AICc/BIC comparison; REML vs. ML; parametric bootstrap for random effects |
+
+## Interpretation
+
+| Notebook | Description |
+|---|---|
+| `shap_values_R.ipynb` | Tree SHAP via `shapviz`; beeswarm, dependence, and waterfall plots; global and local interpretation |
+| `partial_dependence_R.ipynb` | PDPs and ICE curves; 2D interaction surfaces; when PDPs mislead with correlated features |
+| `accumulated_local_effects_R.ipynb` | ALE plots as bias-corrected alternative to PDPs; 2D ALE for interactions; `iml` package |
+| `permutation_importance_R.ipynb` | Model-agnostic permutation importance on test data; uncertainty via repeated permutations; `vip` |
+
+**Key packages:** `DHARMa`, `car`, `lmtest`, `sandwich`, `shapviz`, `pdp`, `iml`, `vip`, `xgboost`
 
 ---
 
