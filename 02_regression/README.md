@@ -13,7 +13,6 @@ Linear and generalised linear models — from simple OLS to count and binary out
 | `ordinal_regression_R.ipynb` | Ordered categorical outcomes; proportional odds model; `MASS::polr` |
 
 **Key packages:** `stats`, `MASS`, `betareg`, `pROC`, `broom`
----
 
 ## Dependencies
 
