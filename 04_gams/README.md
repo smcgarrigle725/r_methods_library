@@ -1,21 +1,17 @@
-# Generalized Additive Models (GAMs)
+# 04 · Generalised Additive Models (GAMs)
 
-Notebooks covering GAMs in R using `mgcv`. GAMs extend generalized linear models by allowing predictor-response relationships to be modeled as flexible smooth functions rather than straight lines — making them well-suited to ecological gradients, nonlinear temporal trends, and complex spatial patterns.
-
-All notebooks use built-in or simulated datasets — no downloads required.
-
----
-
-## Contents
+Flexible regression with smooth, non-linear terms. GAMs extend GLMs by replacing linear predictors with penalised splines — capturing curvature without specifying its form in advance.
 
 | Notebook | Description |
 |---|---|
-| `gam_basics.ipynb` | GAM fundamentals: smooth terms, basis functions, and fitting with `mgcv` |
-| `gam_families.ipynb` | GAMs with different response distributions: Gaussian, Poisson, binomial, negative binomial, Tweedie |
-| `gam_interactions.ipynb` | Tensor product smooths for interactions between continuous predictors |
-| `gam_diagnostics.ipynb` | Model checking with `gratia`: residuals, basis dimension, concurvity |
-| `gam_visualization.ipynb` | Plotting smooth terms, partial effects, and predictions with `gratia` and `ggplot2` |
-| `gam_vs_glm.ipynb` | When to use a GAM vs. a GLM; AIC comparison and interpretability trade-offs |
+| `gam_basics_R.ipynb` | Smooth terms, basis functions, and GCV penalty selection; `mgcv::gam` |
+| `gam_distributions_R.ipynb` | GAMs for Poisson, binomial, gamma, and Tweedie responses |
+| `gam_interactions_R.ipynb` | Tensor product smooths; 2D surfaces; factor-smooth interactions |
+| `gamm_R.ipynb` | GAMs with random effects (GAMMs); `gamm4` |
+| `gam_prediction_R.ipynb` | Prediction, confidence bands, and marginal effects from fitted GAMs |
+| `gam_model_checking_R.ipynb` | `gam.check()`, concurvity, basis dimension adequacy, residual diagnostics |
+
+**Key packages:** `mgcv`, `gamm4`, `gratia`, `ggplot2`
 
 ---
 
