@@ -1,27 +1,21 @@
-# Multivariate & Community Analysis
+# 05 · Multivariate Analysis
 
-Notebooks covering multivariate methods in R, with a focus on dissimilarity-based approaches from community ecology. These methods are applicable wherever the unit of analysis is a *profile* or *composition* rather than a single variable — species assemblages, patient symptom profiles, customer feature vectors, or portfolio compositions.
-
-All notebooks use built-in or simulated datasets — no downloads required.
-
-> **Note on Python equivalents:** Most dissimilarity-based methods (PERMANOVA, nMDS, ANOSIM) are implemented in R's `vegan` package without close Python equivalents. `scikit-bio` provides partial coverage. Where Python alternatives exist, they are noted within each notebook.
-
----
-
-## Contents
+Methods for analysing multiple response variables simultaneously — essential for community ecology, morphometrics, and any setting where outcomes are inherently multidimensional.
 
 | Notebook | Description |
 |---|---|
-| `multivariate_assumptions.ipynb` | Dispersion homogeneity (betadisper), checking multivariate normality; these are the assumption checks that belong before PERMANOVA and dbRDA |
-| `pca.ipynb` | Principal components analysis: ordination, biplots, variance explained, and interpretation |
-| `nmds.ipynb` | Non-metric multidimensional scaling: stress, ordination plots, and species vectors |
-| `permanova.ipynb` | PERMANOVA and pairwise PERMANOVA for testing multivariate group differences |
-| `anosim_mantel.ipynb` | ANOSIM for group separation; Mantel test for matrix correlation |
-| `dbrda.ipynb` | Distance-based redundancy analysis: constrained ordination with environmental predictors |
-| `beta_diversity.ipynb` | Decomposing beta diversity into nestedness vs. turnover components (betapart); important for interpreting PERMANOVA results |
-| `indicator_species.ipynb` | IndVal and multipatt for identifying which species characterize each group; pairs naturally with NMDS/PERMANOVA |
-| `clustering.ipynb` | Hierarchical clustering and k-means applied to community/compositional data |
-| `biplots_visualization.ipynb` | Publication-quality ordination plots with species/variable vectors using `ggplot2` |
+| `manova_R.ipynb` | MANOVA; Pillai, Wilks, Roy statistics; follow-up univariate tests |
+| `discriminant_analysis_R.ipynb` | LDA and QDA; classification and group separation |
+| `cluster_analysis_intro_R.ipynb` | Overview of clustering approaches; distance metrics; data preparation |
+| `pca_intro_R.ipynb` | PCA for multivariate data reduction; scores and loadings |
+| `canonical_correlation_R.ipynb` | Canonical correlation analysis; relating two sets of variables |
+| `multivariate_regression_R.ipynb` | Multiple responses; MANOVA as regression; coefficient matrices |
+| `hotelling_t2_R.ipynb` | Hotelling's T² for multivariate group comparisons |
+| `profile_analysis_R.ipynb` | Repeated measures multivariate; parallelism, levels, flatness tests |
+| `procrustes_R.ipynb` | Procrustes analysis; shape comparison; matrix superimposition |
+| `multivariate_normality_R.ipynb` | Testing MVN; Mardia, Royston, Henze-Zirkler tests; QQ plots |
+
+**Key packages:** `MASS`, `candisc`, `CCA`, `MVN`, `vegan`
 
 ---
 
