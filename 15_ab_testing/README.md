@@ -1,22 +1,19 @@
-# A/B Testing & Experimental Design
+# 15 · A/B Testing and Experimental Design
 
-Notebooks covering the statistical foundations of controlled experiments — from designing a study with adequate power through analyzing results and avoiding common pitfalls. Your background in field experimental design transfers directly here.
-
-All notebooks use simulated datasets — no downloads required.
-
----
-
-## Contents
+The final folder closes the loop between study design and analysis. The central message: decisions made before data collection — what effect size matters, how many observations are needed, how interim analyses will be handled — determine the validity of everything that follows.
 
 | Notebook | Description |
 |---|---|
-| `power_analysis.ipynb` | Sample size calculation and power analysis for common test types using `pwr` |
-| `ab_test_proportions.ipynb` | Two-sample proportion test for binary outcomes (conversion rates, treatment response) |
-| `ab_test_means.ipynb` | Two-sample t-test for continuous outcomes; connecting to basic inference |
-| `multiple_testing_correction.ipynb` | Bonferroni, Benjamini-Hochberg (FDR), and when each is appropriate |
-| `experiment_design_principles.ipynb` | Randomization, blocking, stratification, and controlling for confounders |
-| `sequential_testing.ipynb` | Early stopping and sequential testing; controlling type I error over time |
-| `minimum_detectable_effect.ipynb` | Defining and justifying the minimum effect size worth detecting |
+| `power_analysis_R.ipynb` | Sample size calculation for t-tests, proportions, ANOVA, correlations; power curves; sensitivity analysis |
+| `ab_testing_fundamentals_R.ipynb` | Two-sample tests for continuous and binary outcomes; effect sizes; permutation testing with `infer` |
+| `multiple_testing_correction_R.ipynb` | Bonferroni, Holm, Benjamini-Hochberg FDR; when each is appropriate; p-value histogram diagnostics |
+| `experiment_design_principles_R.ipynb` | CRD vs. RCBD; stratified randomisation; balance checks with SMD; pseudoreplication |
+| `sequential_testing_R.ipynb` | α-spending functions; O'Brien-Fleming and Pocock boundaries; the true cost of peeking; `gsDesign` |
+| `minimum_detectable_effect_R.ipynb` | Defining MDEs from domain knowledge; MDE vs. n curves; sensitivity to σ misspecification |
+| `bayesian_ab_testing_R.ipynb` | Beta-binomial and normal-normal models; P(B > A); expected loss; prior sensitivity analysis |
+| `factorial_designs_R.ipynb` | 2×2 and 3-factor factorial designs; interaction detection; Type III ANOVA; `emmeans` simple effects |
+
+**Key packages:** `pwr`, `infer`, `gsDesign`, `bayesAB`, `emmeans`, `agricolae`, `effectsize`
 
 ---
 
