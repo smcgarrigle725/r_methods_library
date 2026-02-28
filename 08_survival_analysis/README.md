@@ -1,23 +1,17 @@
-# Survival Analysis
+# 08 · Survival Analysis
 
-Notebooks covering time-to-event analysis in R. Survival analysis models the time until an event of interest occurs — and crucially, handles *censored* observations where the event has not yet occurred by the end of the study period.
-
-Originally developed for clinical research, these methods transfer directly to any domain where time-to-event is the outcome of interest.
-
-All notebooks use built-in or simulated datasets — no downloads required.
-
----
-
-## Contents
+Methods for time-to-event data where outcomes may be censored. Applicable to species persistence, time-to-recolonisation, clinical endpoints, and any setting where the event of interest may not be observed for all subjects.
 
 | Notebook | Description |
 |---|---|
-| `kaplan_meier.ipynb` | Kaplan-Meier survival curves: estimation, visualization, and log-rank test |
-| `cox_proportional_hazards.ipynb` | Cox PH model: fitting, assumption checking (proportional hazards), and interpretation of hazard ratios |
-| `accelerated_failure_time.ipynb` | AFT models as a parametric alternative to Cox regression |
-| `survival_visualization.ipynb` | Publication-quality survival curves with confidence intervals using `survminer` |
-| `competing_risks.ipynb` | When subjects can fail from multiple causes (invertebrate lost to predation vs. desiccation; patient dies from cancer vs. cardiovascular disease); cumulative incidence functions and Fine-Gray subdistribution hazards. Frequently needed and frequently mishandled with standard KM |
-| `time_varying_covariates.ipynb` | covariates that change value during follow-up (treatment dose changes, habitat quality measured at multiple points); extends Cox and fixes a major assumption violation people routinely miss |
+| `kaplan_meier_R.ipynb` | KM estimator; survival curves; log-rank test; `survfit` |
+| `cox_regression_R.ipynb` | Cox proportional hazards model; hazard ratios; Schoenfeld residuals |
+| `parametric_survival_R.ipynb` | Weibull, exponential, log-normal AFT models; `survreg` |
+| `competing_risks_R.ipynb` | Fine-Gray model; cause-specific hazards; cumulative incidence functions |
+| `time_varying_covariates_R.ipynb` | Counting process formulation; time-updated exposures in Cox models |
+| `frailty_models_R.ipynb` | Random effects (frailties) for clustered survival data |
+
+**Key packages:** `survival`, `survminer`, `cmprsk`, `frailtypack`
 
 ---
 
