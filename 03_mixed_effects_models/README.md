@@ -1,20 +1,16 @@
-# Mixed Effects Models
+# 03 · Mixed Effects Models
 
-Notebooks covering linear and generalized linear mixed effects models (LMMs and GLMMs) in R. Mixed models account for non-independence in data arising from repeated measures, nested sampling designs, or hierarchical structure — common in both ecological fieldwork and industry datasets with grouped observations.
-
-All notebooks use built-in or simulated datasets — no downloads required.
-
----
-
-## Contents
+Models for clustered, nested, and longitudinal data where observations are not independent. Random effects account for grouping structure; fixed effects estimate population-level parameters.
 
 | Notebook | Description |
 |---|---|
-| `lmm_basics.ipynb` | Linear mixed models with random intercepts and random slopes using `lme4` |
-| `glmm_basics.ipynb` | Generalized linear mixed models for non-normal responses (binomial, Poisson, negative binomial) using `glmmTMB` |
-| `random_effects_structure.ipynb` | Choosing and justifying random effects structure; crossed vs. nested random effects |
-| `dharma_diagnostics.ipynb` | Residual diagnostics with `DHARMa`; overdispersion, zero-inflation, and model fit checks |
-| `model_selection_lmm.ipynb` | AIC/AICc-based model selection and multi-model inference with `AICcmodavg` and `MuMIn` |
+| `random_intercept_R.ipynb` | Random intercepts for grouped data; ICC; `lme4::lmer` |
+| `random_slope_R.ipynb` | Random slopes; when and why group-level effects vary; correlation of random effects |
+| `crossed_random_effects_R.ipynb` | Crossed vs. nested random effects; multiple grouping factors |
+| `glmm_R.ipynb` | Generalised LMMs for binary and count outcomes; `glmer` |
+| `lmm_model_selection_R.ipynb` | REML vs. ML; LRT for random and fixed effects; AIC comparison |
+
+**Key packages:** `lme4`, `lmerTest`, `broom.mixed`, `performance`, `pbkrtest`
 
 ---
 
