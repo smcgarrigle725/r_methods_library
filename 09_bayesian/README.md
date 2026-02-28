@@ -1,22 +1,18 @@
-# Bayesian Methods
+# 09 · Bayesian Methods
 
-Notebooks covering Bayesian statistical inference in R using `NIMBLE`. Bayesian methods treat parameters as probability distributions rather than fixed values, allowing explicit incorporation of prior knowledge and full quantification of uncertainty.
-
-All notebooks use simulated datasets — no downloads required.
-
----
-
-## Contents
+Bayesian inference using Stan and related tools. Covers the full workflow from prior specification to posterior diagnostics, with an emphasis on principled uncertainty quantification.
 
 | Notebook | Description |
 |---|---|
-| `bayesian_fundamentals.ipynb` | Prior, likelihood, posterior — the Bayesian workflow; MCMC concepts |
-| `bayesian_linear_regression.ipynb` | Bayesian linear regression with `NIMBLE`; comparing to frequentist results |
-| `hierarchical_models.ipynb` | Bayesian hierarchical (multilevel) models; partial pooling and shrinkage |
-| `mcmc_diagnostics.ipynb` | Trace plots, R-hat, effective sample size, and posterior predictive checks with `coda` |
-| `model_comparison_waic.ipynb` | Bayesian model comparison using WAIC and LOO-CV with the `loo` package |
-| `prior_sensitivity_R.ipynb` | Core demonstration fits the same model across four prior widths (tight/moderate/wide/vague) on both a large and small dataset simultaneously, then visualises the posterior densities overlaid |
-| `bayesian_workflow_R.ipynb` | Deliberately engineered to fail on the first model (Poisson) so the PPC failure is concrete and instructive rather than hypothetical. The variance/mean test statistic is the specific PPC that catches the overdispersion, which then motivates the switch to Negative Binomial. The notebook ends with a 10-point checklist formatted as an actual checklist that can live in the folder as a reference card. The workflow loops — that's the main point the pitfalls section reinforces |
+| `bayes_intro_R.ipynb` | Prior, likelihood, posterior; conjugate models; grid approximation |
+| `mcmc_diagnostics_R.ipynb` | Trace plots, R-hat, ESS, divergences; identifying sampling failures |
+| `brms_regression_R.ipynb` | Bayesian linear and GLM regression with `brms`; prior predictive checks |
+| `hierarchical_models_R.ipynb` | Partial pooling; multilevel Bayesian models; shrinkage |
+| `model_comparison_bayes_R.ipynb` | LOO-CV, WAIC, Bayes factors; `loo` package |
+| `posterior_predictive_R.ipynb` | Posterior predictive checks; `bayesplot`; calibration |
+| `stan_custom_R.ipynb` | Writing custom Stan models; blocks, transformed parameters, generated quantities |
+
+**Key packages:** `brms`, `rstan`, `loo`, `bayesplot`, `posterior`
 
 ---
 
