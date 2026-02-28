@@ -1,23 +1,18 @@
-# Regression
+# 02 · Regression
 
-Notebooks covering regression methods in R, from simple linear models through generalized linear models for non-normal response variables. Includes assumption testing, diagnostics, and model selection.
-
-All notebooks use built-in R datasets — no downloads required.
-
----
-
-## Contents
+Linear and generalised linear models — from simple OLS to count and binary outcomes. Emphasis on correct interpretation, assumption checking, and reporting effect sizes alongside p-values.
 
 | Notebook | Description |
 |---|---|
-| `linear_regression.ipynb` | Simple and multiple linear regression, diagnostics, and interpretation |
-| `logistic_regression.ipynb` | Binary logistic regression for presence/absence and binary outcome data |
-| `multinomial_regression.ipynb` | Multinomial logistic regression for unordered categorical outcomes |
-| `ordinal_regression.ipynb` | Ordinal logistic regression for ordered categorical outcomes |
-| `glm_count_data.ipynb` | Poisson and negative binomial regression for count data; zero-inflated models |
-| `regularized_regression.ipynb` | Ridge, lasso, and elastic net regression for high-dimensional data |
-| `regression_diagnostics.ipynb` | Residual analysis, leverage, Cook's distance, VIF, and model fit |
+| `simple_linear_regression_R.ipynb` | OLS, R², residual diagnostics, and prediction intervals |
+| `multiple_regression_R.ipynb` | Multiple predictors, partial effects, model building, standardised coefficients |
+| `logistic_regression_R.ipynb` | Binary outcomes; odds ratios, predicted probabilities, ROC/AUC |
+| `poisson_regression_R.ipynb` | Count outcomes; offsets, rate ratios, overdispersion checks |
+| `negative_binomial_R.ipynb` | Overdispersed counts; NB vs. Poisson model comparison |
+| `beta_regression_R.ipynb` | Proportions and rates bounded (0,1); `betareg` package |
+| `ordinal_regression_R.ipynb` | Ordered categorical outcomes; proportional odds model; `MASS::polr` |
 
+**Key packages:** `stats`, `MASS`, `betareg`, `pROC`, `broom`
 ---
 
 ## Dependencies
