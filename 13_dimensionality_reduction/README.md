@@ -1,20 +1,20 @@
-# Dimensionality Reduction
+# 13 · Dimensionality Reduction
 
-Notebooks covering methods for reducing high-dimensional data to fewer dimensions while preserving meaningful structure. Used for visualization, noise reduction, feature extraction, and as preprocessing for downstream modeling.
-
-All notebooks use built-in or simulated datasets — no downloads required.
-
----
-
-## Contents
+Methods for compressing high-dimensional data into fewer dimensions while preserving structure. The folder progresses from interpretable linear methods (PCA, FA) through non-linear visualisation tools (t-SNE, UMAP) to ecologically specialised ordination (CA, nMDS) and high-dimensional sparse approaches.
 
 | Notebook | Description |
 |---|---|
-| `pca.ipynb` | Principal components analysis: variance explained, loadings, biplots, and scree plots |
-| `factor_analysis.ipynb` | Exploratory factor analysis; comparing to PCA and when to prefer it |
-| `tsne.ipynb` | t-SNE for nonlinear dimensionality reduction and cluster visualization |
-| `umap.ipynb` | UMAP as a faster, more scalable alternative to t-SNE |
-| `correspondence_analysis.ipynb` | Correspondence analysis for categorical/count data (e.g. species × site matrices) |
+| `pca_R.ipynb` | Loadings, scree plots, biplots, contribution plots, and out-of-sample projection |
+| `factor_analysis_R.ipynb` | EFA vs. PCA; latent constructs; parallel analysis for factor number; oblique rotation |
+| `tsne_R.ipynb` | t-SNE; perplexity sensitivity; colouring by feature; why inter-cluster distances are meaningless |
+| `umap_R.ipynb` | UMAP; parameter sensitivity grid; out-of-sample embedding with `umap_transform`; batch confounding |
+| `correspondence_analysis_R.ipynb` | CA for contingency tables and species × site matrices; MCA for multiple categorical variables |
+| `nmds_R.ipynb` | nMDS with Bray-Curtis dissimilarity; stress and Shepard diagram; `envfit` vectors; PERMANOVA; metric MDS (PCoA) |
+| `sparse_methods_R.ipynb` | Sparse PCA for interpretable loadings when p >> n; ICA for non-Gaussian source separation |
+
+**Key packages:** `prcomp`, `psych`, `Rtsne`, `uwot`, `FactoMineR`, `vegan`, `sparsepca`, `fastICA`
+
+> **Note:** `dimensionality_reduction_R.ipynb` in `12_clustering` covers PCA + t-SNE + UMAP as an integrated visualisation workflow for clustering. The notebooks here go deeper on each method individually.
 
 ---
 
