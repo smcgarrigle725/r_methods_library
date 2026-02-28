@@ -1,22 +1,18 @@
-# Clustering
+# 12 · Clustering
 
-Notebooks covering unsupervised clustering methods in R — algorithms that group observations by similarity without predefined labels. Clustering is used to discover natural groupings in data: species assemblages, patient subtypes, customer segments, or risk cohorts.
-
-All notebooks use built-in or simulated datasets — no downloads required.
-
----
-
-## Contents
+Unsupervised methods for discovering structure in unlabelled data. Covers the full workflow: choosing a method, selecting k, validating results, and — critically — profiling clusters to determine whether they are scientifically meaningful.
 
 | Notebook | Description |
 |---|---|
-| `kmeans.ipynb` | k-means clustering; choosing k with the elbow method and silhouette scores |
-| `hierarchical_clustering.ipynb` | Agglomerative hierarchical clustering; dendrograms and linkage methods |
-| `dbscan.ipynb` | DBSCAN for density-based clustering; handling noise and irregular cluster shapes |
-| `gaussian_mixture_models.ipynb` | Gaussian mixture models with `mclust`; probabilistic cluster assignment |
-| `cluster_validation.ipynb` | Internal validation metrics: silhouette width, Calinski-Harabasz, Davies-Bouldin |
-| `dimensionality_reduction.ipynb` | PCA, UMAP, and t-SNE for visualising high-dimensional data before and after clustering; these are almost always used together with clustering in practice and the workflow of "reduce → cluster → visualise" deserves its own notebook. Distinct enough from the clustering methods themselves |
-| `cluster_profiling.ipynb` | Interpreting and describing clusters after assignment: heatmaps of feature means, statistical tests between clusters, naming/labelling strategies; the step most notebooks skip entirely but that determines whether clustering results are actually usable |
+| `kmeans_R.ipynb` | k-means; elbow, silhouette, and gap statistic for choosing k; pitfalls of spherical cluster assumption |
+| `hierarchical_clustering_R.ipynb` | Agglomerative clustering; linkage methods; dendrograms; Gower distance for mixed-type data |
+| `dbscan_R.ipynb` | Density-based clustering; k-NN distance plot for eps selection; HDBSCAN for variable-density clusters |
+| `gaussian_mixture_models_R.ipynb` | Soft assignments; covariance model selection via BIC; uncertainty of assignment; `mclust` |
+| `cluster_validation_R.ipynb` | Silhouette, Calinski-Harabasz, Davies-Bouldin, Dunn; external validation with ARI |
+| `dimensionality_reduction_R.ipynb` | PCA → t-SNE/UMAP workflow for visualising high-dimensional data before and after clustering |
+| `cluster_profiling_R.ipynb` | Interpreting clusters: heatmaps, Kruskal-Wallis, effect sizes, naming, boundary observations |
+
+**Key packages:** `cluster`, `factoextra`, `dbscan`, `mclust`, `fpc`, `uwot`, `Rtsne`
 
 ---
 
