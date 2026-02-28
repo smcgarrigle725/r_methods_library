@@ -1,21 +1,15 @@
-# Basic Statistical Inference
+# 01 · Basic Inference
 
-Notebooks covering foundational hypothesis testing methods in R. These form the basis of more complex analyses and are directly applicable across ecological, clinical, financial, and insurance contexts.
-
-All notebooks use built-in R datasets — no downloads required. Each follows a consistent structure: assumptions checklist, inline assumptions testing, analysis, interpretation, and common pitfalls.
-
----
-
-## Contents
+Foundational hypothesis testing and estimation. These notebooks establish the vocabulary and workflow used throughout the library — effect sizes, confidence intervals, and the distinction between statistical and practical significance.
 
 | Notebook | Description |
 |---|---|
-| `t_tests.ipynb` | One-sample, independent two-sample (Welch's & Student's), and paired t-tests with effect sizes |
-| `anova.ipynb` | One-way and two-way ANOVA, post-hoc tests (Tukey HSD, Bonferroni), and assumption checking |
-| `chi_square_fisher.ipynb` | Chi-square test of independence, goodness-of-fit test, and Fisher's exact test for small samples |
-| `confidence_intervals_effect_sizes.ipynb` | Confidence interval construction, Cohen's d, eta-squared, and power analysis |
+| `t_tests_R.ipynb` | One-sample, two-sample, and paired t-tests; Welch vs. Student; Cohen's d |
+| `anova_R.ipynb` | One-way and two-way ANOVA; post-hoc tests (Tukey, Bonferroni); effect sizes |
+| `chi_square_R.ipynb` | Chi-squared goodness-of-fit and test of independence; Fisher's exact test |
+| `confidence_intervals_R.ipynb` | CI construction, interpretation, and bootstrap CIs for any statistic |
 
----
+**Key packages:** `stats`, `effectsize`, `boot`, `rstatix`
 
 ## Dependencies
 
