@@ -1,99 +1,44 @@
 # r_methods_library
 
-A documented reference library of statistical methods implemented in R. Each notebook contains working code with explanations of when and why to use each method, inline assumptions testing, interpretation guidance, and applications across ecology, healthcare, finance, and insurance.
-
-Notebooks are self-contained — built-in or simulated datasets only, no external downloads required.
-
----
+A reference library of statistical methods implemented in R, organised by topic. Each notebook covers one method or closely related group of methods: a conceptual overview, worked R code on simulated ecological data, and a dedicated pitfalls section documenting the most common misapplications.
 
 ## Structure
 
-| Folder | Contents |
-|---|---|
-| `01_basic_inference/` | t-tests, ANOVA, chi-square, Fisher's exact, confidence intervals, effect sizes |
-| `02_regression/` | Linear, logistic, multinomial, ordinal, GLMs for count data, regularized regression |
-| `03_mixed_effects_models/` | LMMs, GLMMs, random effects structure, diagnostics, model selection |
-| `04_gams/` | GAM basics, families, interactions, diagnostics, visualization |
-| `05_multivariate/` | PCA, nMDS, PERMANOVA, dbRDA, ANOSIM, Mantel test, biplots |
-| `06_nonparametric/` | Mann-Whitney, Wilcoxon, Kruskal-Wallis, Spearman, permutation tests, normality tests |
-| `07_time_series/` | Decomposition, ARIMA, SARIMA, Prophet, exponential smoothing, TS cross-validation |
-| `08_survival_analysis/` | Kaplan-Meier, Cox proportional hazards, AFT models, survival visualization |
-| `09_bayesian/` | Bayesian inference with NIMBLE, hierarchical models, MCMC diagnostics, WAIC |
-| `10_classification/` | Decision trees, random forest, XGBoost, LightGBM, model evaluation, SHAP |
-| `11_cross_validation/` | Train/test split, k-fold CV, LOOCV, time series CV, hyperparameter tuning |
-| `12_clustering/` | k-means, hierarchical, DBSCAN, Gaussian mixture models, cluster validation |
-| `13_dimensionality_reduction/` | PCA, factor analysis, t-SNE, UMAP, correspondence analysis |
-| `14_model_diagnostics/` | Residuals, DHARMa, VIF, Cook's distance, SHAP, partial dependence, feature importance |
-| `15_ab_testing/` | Power analysis, proportion and mean tests, multiple testing, experiment design |
+| Folder | Topic | Notebooks |
+|---|---|---|
+| `01_basic_inference` | t-tests, ANOVA, chi-squared, confidence intervals | 4 |
+| `02_regression` | OLS through ordinal regression; GLMs | 7 |
+| `03_mixed_effects_models` | Random intercepts, slopes, GLMMs, model selection | 5 |
+| `04_gams` | Penalised splines; GAMs and GAMMs | 6 |
+| `05_multivariate` | MANOVA, discriminant analysis, canonical correlation | 10 |
+| `06_nonparametric` | Rank-based tests; permutation tests | 5 |
+| `07_time_series` | ARIMA, ETS, VAR, intervention analysis, GARCH | 10 |
+| `08_survival_analysis` | Kaplan-Meier, Cox regression, competing risks | 6 |
+| `09_bayesian_methods` | Stan/brms; hierarchical models; LOO-CV | 7 |
+| `10_classification` | Random forest, XGBoost, SVM, model evaluation | 8 |
+| `11_cross_validation_model_selection` | CV variants, regularisation, nested CV, bootstrap | 9 |
+| `12_clustering` | k-means, hierarchical, DBSCAN, GMMs, validation, profiling | 7 |
+| `13_dimensionality_reduction` | PCA, FA, t-SNE, UMAP, CA, nMDS, sparse methods | 7 |
+| `14_model_diagnostics_interpretation` | Residuals, DHARMa, SHAP, ALE, permutation importance | 10 |
+| `15_ab_testing_experimental_design` | Power, A/B tests, sequential testing, factorial designs | 8 |
+| **Total** | | **109** |
 
----
+## Design principles
 
-## Notebook Structure
+**One concept per notebook.** Each notebook has a narrow scope — `kfold_cv_R.ipynb` covers k-fold CV only, not all of cross-validation. This makes individual notebooks easier to use as references.
 
-Every notebook follows this consistent template:
+**Simulated ecological data throughout.** All examples use simulated water quality, species richness, or site-level data. Simulated data means the ground truth is known, which makes it possible to demonstrate what correct and incorrect analyses actually produce.
 
-1. **Overview** — what the method does, when to use it
-2. **Applications by Sector** — ecology, healthcare, finance, insurance examples
-3. **Assumptions Checklist** — static reference list
-4. **Setup** — libraries and reproducibility
-5. **Data** — built-in or simulated dataset with description
-6. **Assumptions Testing** — inline tests run before the model
-7. **Analysis** — main implementation with comments
-8. **Interpretation** — how to read the output
-9. **Reporting** — standard format for results
-10. **Common Pitfalls** — what to watch out for
+**Pitfalls section in every notebook.** The final section of each notebook documents five common mistakes for that method — not as a checklist but as worked explanations of *why* each mistake matters and what it produces.
 
----
+**Methods build on each other.** The folder order is intentional: regression before mixed models, GLMs before GLMMs, basic clustering before validation. Where a notebook depends on concepts from another, it is noted in the overview.
 
-## Setup
+## Usage
 
-### IRkernel (required to run R notebooks in Jupyter)
+Each notebook is self-contained: run from top to bottom in a fresh R kernel. All data are simulated within the notebook using `set.seed()` for reproducibility.
 
-```r
-# Run once in R
-install.packages("IRkernel")
-IRkernel::installspec()
-```
+Required packages are listed at the top of each notebook's setup cell and in each folder's `README.md`.
 
-Then launch Jupyter and select **R** as the kernel when creating a new notebook.
+## Author
 
-### Core dependencies
-
-```r
-# Install all packages used across the library
-install.packages(c(
-  # Data manipulation & visualization
-  "tidyverse", "ggplot2", "ggpubr", "broom",
-  # Inference & nonparametrics
-  "car", "effectsize", "rstatix", "pwr", "coin", "nortest", "dunn.test",
-  # Regression & GLMs
-  "MASS", "glmnet", "pscl", "performance",
-  # Mixed models
-  "lme4", "glmmTMB", "DHARMa", "AICcmodavg", "MuMIn", "broom.mixed",
-  # GAMs
-  "mgcv", "gratia",
-  # Multivariate
-  "vegan", "ade4", "FactoMineR", "factoextra",
-  # Time series
-  "forecast", "tseries", "prophet", "lubridate", "zoo",
-  # Survival
-  "survival", "survminer",
-  # Bayesian
-  "nimble", "coda", "loo", "bayesplot",
-  # Classification & ML
-  "rpart", "rpart.plot", "ranger", "xgboost", "lightgbm",
-  "caret", "pROC", "ROSE", "themis", "shapviz", "pdp", "vip",
-  # Clustering & dimensionality reduction
-  "cluster", "dbscan", "mclust", "Rtsne", "umap", "psych",
-  # Tidymodels ecosystem
-  "tidymodels", "rsample", "yardstick"
-))
-```
-
----
-
-*Part of a broader portfolio. See also:
-[ecological_data_science](https://github.com/samantha-mcgarrigle/ecological_data_science) ·
-[python_methods_library](https://github.com/samantha-mcgarrigle/python_methods_library) ·
-[databases](https://github.com/samantha-mcgarrigle/databases) ·
-[industry_projects](https://github.com/samantha-mcgarrigle/industry_projects)*
+Samantha McGarrigle · [github.com/samantha-mcgarrigle](https://github.com/samantha-mcgarrigle)
