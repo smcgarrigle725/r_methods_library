@@ -14,6 +14,7 @@ Linear and generalised linear models — from simple OLS to count and binary out
 
 **Key packages:** `stats`, `MASS`, `betareg`, `pROC`, `broom`
 
+---
 ## Dependencies
 
 ```r
