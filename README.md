@@ -211,27 +211,6 @@ Then launch Jupyter and select "R" as the kernel.
 8. `factorial_designs` — 2^k designs, interaction effects, ANOVA for factorial experiments
 9. `regression_discontinuity` — Sharp and fuzzy RD designs, bandwidth selection, rdrobust package
 
----
-
-## Build Status
-
-| Folder | Status |
-|---|---|
-| 01_basic_inference | ✅ Complete |
-| 02_regression | ✅ Complete |
-| 03_mixed_effects_models | ✅ Complete |
-| 04_gams | ✅ Complete |
-| 05_multivariate | ✅ Complete |
-| 06_nonparametric | ✅ Complete |
-| 07_time_series | ✅ Complete |
-| 08_survival_analysis | ✅ Complete |
-| 09_bayesian_methods | ✅ Complete |
-| 10_classification | ✅ Complete |
-| 11_cross_validation_model_selection | ✅ Complete |
-| 12_clustering | ✅ Complete |
-| 13_dimensionality_reduction | ✅ Complete |
-| 14_model_diagnostics_interpretation | ✅ Complete |
-| 15_ab_testing_experimental_design | ✅ Complete |
 
 ---
 *r_methods_library - Samantha McGarrigle*
