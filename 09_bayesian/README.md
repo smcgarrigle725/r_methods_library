@@ -11,8 +11,9 @@ Bayesian inference using Stan and related tools. Covers the full workflow from p
 | `model_comparison_bayes_R.ipynb` | LOO-CV, WAIC, Bayes factors; `loo` package |
 | `posterior_predictive_R.ipynb` | Posterior predictive checks; `bayesplot`; calibration |
 | `stan_custom_R.ipynb` | Writing custom Stan models; blocks, transformed parameters, generated quantities |
+| `meta_analysis.ipynb` | Combining results across studies; fixed vs. random effects; forest plots; heterogeneity (I²); funnel plots; Bayesian meta-analysis via `brms` and `metafor` |
 
-**Key packages:** `brms`, `rstan`, `loo`, `bayesplot`, `posterior`
+**Key packages:** `brms`, `rstan`, `loo`, `bayesplot`, `posterior`, `metafor`
 
 ---
 

@@ -8,8 +8,10 @@ Foundational hypothesis testing and estimation. These notebooks establish the vo
 | `anova_R.ipynb` | One-way and two-way ANOVA; post-hoc tests (Tukey, Bonferroni); effect sizes |
 | `chi_square_R.ipynb` | Chi-squared goodness-of-fit and test of independence; Fisher's exact test |
 | `confidence_intervals_R.ipynb` | CI construction, interpretation, and bootstrap CIs for any statistic |
+| `transformations.ipynb` | sqrt, log, arcsine, and Box-Cox transformations; when and why to transform; back-transforming estimates and CIs |
+| `multiple_comparisons.ipynb` | Tukey HSD, Bonferroni, Dunnett, and Holm corrections; planned (a priori) vs. unplanned (a posteriori) contrasts; experiment-wise Type I error control |
 
-**Key packages:** `stats`, `effectsize`, `boot`, `rstatix`
+**Key packages:** `stats`, `effectsize`, `boot`, `rstatix`, `emmeans`, `multcomp`
 
 ---
 

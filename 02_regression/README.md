@@ -11,8 +11,13 @@ Linear and generalised linear models — from simple OLS to count and binary out
 | `negative_binomial_R.ipynb` | Overdispersed counts; NB vs. Poisson model comparison |
 | `beta_regression_R.ipynb` | Proportions and rates bounded (0,1); `betareg` package |
 | `ordinal_regression_R.ipynb` | Ordered categorical outcomes; proportional odds model; `MASS::polr` |
+| `ancova.ipynb` | ANCOVA as regression with continuous covariate + factor; homogeneity of slopes; adjusted means; when ANCOVA vs factorial ANOVA |
+| `model2_regression.ipynb` | Model II regression (major axis, standardised major axis / RMA); when X is also measured with error; morphometrics and allometry |
+| `weighted_least_squares.ipynb` | Weighted least squares for heteroscedastic data; known-variance weights; survey weights |
+| `log_linear_models.ipynb` | Log-linear models for multi-way contingency tables; model selection beyond chi-square; 3-way tables |
+| `smoothing.ipynb` | LOESS/LOWESS, regression splines, and kernel smoothing as standalone tools; distinct from GAMs |
 
-**Key packages:** `stats`, `MASS`, `betareg`, `pROC`, `broom`
+**Key packages:** `stats`, `MASS`, `betareg`, `pROC`, `broom`, `smatr`, `VGAM`, `lmtest`
 
 ---
 ## Dependencies

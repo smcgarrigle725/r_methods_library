@@ -4,18 +4,19 @@ Methods for analysing multiple response variables simultaneously — essential f
 
 | Notebook | Description |
 |---|---|
-| `manova_R.ipynb` | MANOVA; Pillai, Wilks, Roy statistics; follow-up univariate tests |
-| `discriminant_analysis_R.ipynb` | LDA and QDA; classification and group separation |
+| `manova_R.ipynb` | MANOVA; Pillai, Wilks, Hotelling-Lawley, Roy statistics; follow-up univariate tests; canonical discriminant scores |
+| `discriminant_analysis_R.ipynb` | LDA and QDA for group separation and classification; structure matrix; LOO-CV accuracy |
 | `cluster_analysis_intro_R.ipynb` | Overview of clustering approaches; distance metrics; data preparation |
 | `pca_intro_R.ipynb` | PCA for multivariate data reduction; scores and loadings |
-| `canonical_correlation_R.ipynb` | Canonical correlation analysis; relating two sets of variables |
+| `canonical_correlation_R.ipynb` | CCorA relating two continuous variable sets; canonical loadings; redundancy index |
+| `rda_R.ipynb` | Redundancy analysis (linear constrained ordination); Hellinger-transformed species data; variance partitioning; forward selection |
 | `multivariate_regression_R.ipynb` | Multiple responses; MANOVA as regression; coefficient matrices |
 | `hotelling_t2_R.ipynb` | Hotelling's T² for multivariate group comparisons |
 | `profile_analysis_R.ipynb` | Repeated measures multivariate; parallelism, levels, flatness tests |
 | `procrustes_R.ipynb` | Procrustes analysis; shape comparison; matrix superimposition |
 | `multivariate_normality_R.ipynb` | Testing MVN; Mardia, Royston, Henze-Zirkler tests; QQ plots |
 
-**Key packages:** `MASS`, `candisc`, `CCA`, `MVN`, `vegan`
+**Key packages:** `MASS`, `candisc`, `CCA`, `MVN`, `vegan`, `mvnormtest`, `car`
 
 ---
 

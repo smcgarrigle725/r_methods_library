@@ -12,6 +12,8 @@ Two complementary concerns in one folder: **diagnostics** (is the model valid?) 
 | `influential_observations_R.ipynb` | Cook's distance, leverage, DFFITS, DFBETAS; the decision framework for what to do with flagged points |
 | `overdispersion_R.ipynb` | Detecting overdispersion in count and binary models; quasi-Poisson, negative binomial, zero-inflated models |
 | `model_comparison_R.ipynb` | LRT for nested models; AIC/AICc/BIC comparison; REML vs. ML; parametric bootstrap for random effects |
+| `pseudoreplication.ipynb` | Hurlbert (1984) pseudoreplication taxonomy; true replication vs. subsampling; interspersion; ICC-based detection; design audit checklist |
+| `gee.ipynb` | Generalised Estimating Equations; working correlation structures; marginal vs. subject-specific interpretation; comparison with mixed models |
 
 ## Interpretation
 
@@ -21,8 +23,9 @@ Two complementary concerns in one folder: **diagnostics** (is the model valid?) 
 | `partial_dependence_R.ipynb` | PDPs and ICE curves; 2D interaction surfaces; when PDPs mislead with correlated features |
 | `accumulated_local_effects_R.ipynb` | ALE plots as bias-corrected alternative to PDPs; 2D ALE for interactions; `iml` package |
 | `permutation_importance_R.ipynb` | Model-agnostic permutation importance on test data; uncertainty via repeated permutations; `vip` |
+| `results_presentation.ipynb` | SD vs. SE vs. 95% CI for error bars; publication-quality figures with raw data; ANOVA and regression table reporting; mixed model write-up standards |
 
-**Key packages:** `DHARMa`, `car`, `lmtest`, `sandwich`, `shapviz`, `pdp`, `iml`, `vip`, `xgboost`
+**Key packages:** `DHARMa`, `car`, `lmtest`, `sandwich`, `shapviz`, `pdp`, `iml`, `vip`, `xgboost`, `geepack`, `performance`, `metafor`
 
 ---
 
