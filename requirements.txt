@@ -1,0 +1,90 @@
+# R Packages Required
+# This file lists all the R packages used in the repository, organized by purpose.
+
+# Data Manipulation and Visualization
+tidyverse
+ggplot2
+patchwork
+ggpubr
+rstatix
+corrplot
+Hmisc
+scales
+
+# Statistical Analysis
+effectsize
+infer
+pwr
+coin
+dunn.test
+perm
+nortest
+car
+multcomp
+emmeans
+multcompView
+agricolae
+
+# Regression and Mixed Models
+lme4
+glmmTMB
+DHARMa
+MASS
+pscl
+vcd
+AER
+countreg
+ResourceSelection (>= 0.3-5)
+smatr (>= 3.4-8)
+
+# Bayesian Analysis
+brms
+tidybayes
+bayesplot
+bayesAB
+performance
+
+# Survival Analysis
+survival
+flexsurv
+survminer
+tidycmprsk
+cmprsk
+broom
+broom.mixed
+
+# Multivariate Analysis
+vegan
+betapart
+gratia
+
+# Time Series Analysis
+forecast
+
+# Dimensionality Reduction and Clustering
+factoextra
+fastICA
+PMA
+sparsepca
+uwot
+Rtsne
+cluster
+dendextend
+mclust
+dbscan
+pheatmap
+
+# Cross-Validation and Model Tuning
+rsample
+recipes
+parsnip
+workflows
+tune
+dials
+yardstick
+AICcmodavg
+MuMIn
+broom
+
+# General Utilities
+cli
